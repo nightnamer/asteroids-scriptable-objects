@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Button text="Button" display-tooltip-when-elided="true" />
+    <ui:Button text="Button" display-tooltip-when-elided="true" />
+    <ui:Button text="Button" display-tooltip-when-elided="true" />
+    <uie:PropertyField binding-path="_throttlePowerSimple" />
+    <uie:PropertyField binding-path="_rotationPowerSimple" />
+</ui:UXML>

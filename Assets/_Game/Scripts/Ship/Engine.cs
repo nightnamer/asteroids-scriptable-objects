@@ -10,6 +10,7 @@ namespace Ship
         [SerializeField] private FloatVariable _throttlePower;
         [SerializeField] private FloatVariable _rotationPower;
         
+        [Header("Speeds")]
         [SerializeField] private float _throttlePowerSimple;
         [SerializeField] private float _rotationPowerSimple;
 
@@ -35,6 +36,8 @@ namespace Ship
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            _throttlePower._value = _throttlePowerSimple;
+            _rotationPower._value = _rotationPowerSimple;
         }
     
         public void Throttle()
