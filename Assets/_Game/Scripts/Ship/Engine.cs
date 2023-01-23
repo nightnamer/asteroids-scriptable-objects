@@ -1,6 +1,8 @@
+using System;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using Variables;
+using UnityEngine.UIElements;
 
 namespace Ship
 {
@@ -36,10 +38,14 @@ namespace Ship
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            _throttlePower._value = _throttlePowerSimple;
-            _rotationPower._value = _rotationPowerSimple;
         }
-    
+
+        private void Update()
+        {
+            if (_throttlePowerSimple != _throttlePower._value) _throttlePowerSimple = _throttlePower._value;
+            if (_rotationPowerSimple != _rotationPower._value) _rotationPowerSimple = _rotationPower._value;
+        }
+
         public void Throttle()
         {
             _rigidbody.AddForce(transform.up * _throttlePower.Value, ForceMode2D.Force);
@@ -54,5 +60,22 @@ namespace Ship
         {
             _rigidbody.AddTorque(-_rotationPower.Value, ForceMode2D.Force);
         }
+
+        public void SlowSpeed()
+        {
+            _throttlePowerSimple = 8;
+            _rotationPowerSimple = 2;
+        }
+        public void MediumSpeed()
+        {
+            _throttlePowerSimple = 12;
+            _rotationPowerSimple = 5;
+        }
+        public void FastSpeed()
+        {
+            _throttlePowerSimple = 16;
+            _rotationPowerSimple = 8;
+        }
+        
     }
 }

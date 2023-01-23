@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:Button text="Button" display-tooltip-when-elided="true" />
-    <ui:Button text="Button" display-tooltip-when-elided="true" />
-    <ui:Button text="Button" display-tooltip-when-elided="true" />
+    <ui:Button text="Slow Speed" display-tooltip-when-elided="true" name="Slow_button" />
+    <ui:Button text="Medium Speed" display-tooltip-when-elided="true" name="Medium_button" />
+    <ui:Button text="Fast Speed" display-tooltip-when-elided="true" name="Fast_button" />
     <uie:PropertyField binding-path="_throttlePowerSimple" />
     <uie:PropertyField binding-path="_rotationPowerSimple" />
 </ui:UXML>
